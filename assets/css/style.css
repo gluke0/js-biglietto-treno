@@ -1,0 +1,107 @@
+main{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-image: url(../img/backg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-style: italic;
+}
+
+h1{
+    font-size: 4rem;
+    font-style: normal;
+    text-shadow: 3px 2px #66150dea;
+}
+
+.ticket{
+    background-color: rgba(236, 214, 157, 0.8);
+    width: 70%;
+    border-radius: 0.8rem;
+    margin: auto;
+    color: #66150dea;
+    border: 1.5px solid #66150dea;
+}
+
+.ticket h2{
+    font-size: 1.5rem;
+}
+
+.data .box{
+    width: 50%;
+    padding: 0 2rem;
+    margin: 1rem 0 .5rem 0;
+}
+  
+.data .box .text{
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    border-radius: 0.8rem;
+}
+  
+.price{
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+  
+.price h2{
+    font-size: 1rem;
+    color: #66150dea;
+}
+
+.price .box{
+    width: 60%;
+    padding: 0 2rem;
+    margin: .5rem 0;
+}
+  
+.price .box .text{
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    border-radius: 0.8rem;
+}
+  
+.price .box.total p{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+  
+.price .box.total p::after{
+    content: "€";
+    margin-left: 2px;
+}
+
+.buttons{
+    width: 60%;
+    background-color: rgba(236, 214, 157, 0.2);
+    margin: 0 auto;
+    border-radius: 0.8rem;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5rem;
+    border-radius: 0.8rem;
+    color: white;
+    border: none;
+    font-style: italic;
+}
+
+.acq{
+    background-color: #0d5c0dea; 
+}
+
+.refresh{
+    width: 70%;
+    margin: 0 auto;
+    background-color: #66150dea;
+}
+  
+button:hover{
+    transform: scale(1.2);  
+}

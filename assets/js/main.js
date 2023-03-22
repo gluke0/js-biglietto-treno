@@ -30,14 +30,26 @@ standardPrice = distance * rate;
 // sconto
 off20 = standardPrice - (standardPrice * 0.20);
 off40 = standardPrice - (standardPrice * 0.40);
+baby = `UNDER18`;
+senior = `OVER65`;
 
 if (age < 18){
     total = off20;
+    document.getElementById(`off`).innerHTML = baby;
 } else if (age >= 65){
     total = off40
+    document.getElementById(`off`).innerHTML = senior;
 } else {
     total = standardPrice;
 }
  
 // print
-document.getElementById('price').innerHTML = total.toFixed(2);
+document.getElementById(`price`).innerHTML = total.toFixed(2);
+document.getElementById(`name`).innerHTML = name;
+document.getElementById(`surname`).innerHTML = surname;
+document.getElementById(`age`).innerHTML = age;
+document.getElementById(`distance`).innerHTML = distance;
+
+function refreshPage(){
+    window.location.reload();
+}
