@@ -20,16 +20,16 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 // prompt
 const name = prompt('Inserisci il tuo nome');
 const surname = prompt('Inserisci il tuo cognome');
-const age = prompt('Inserisci la tua età');
+const age = parseInt ( prompt('Inserisci la tua età') );
 const distance = parseFloat ( prompt('Inserisci KM totali itinerario') );
 
 // costo
-rate = 0.21;
-standardPrice = distance * rate;
+const rate = 0.21;
+let standardPrice = distance * rate;
 
 // sconto
-off20 = standardPrice - (standardPrice * 0.20);
-off40 = standardPrice - (standardPrice * 0.40);
+let off20 = standardPrice - (standardPrice * 0.20);
+let off40 = standardPrice - (standardPrice * 0.40);
 young = `UNDER18`;
 senior = `OVER65`;
 
@@ -40,7 +40,7 @@ if (age < 18){
     total = off40
     document.getElementById(`off`).innerHTML = senior;
 } else {
-    total = standardPrice;
+    total = standardPrice;    
 }
  
 // print
