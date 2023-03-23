@@ -21,7 +21,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 const name = prompt('Inserisci il tuo nome');
 const surname = prompt('Inserisci il tuo cognome');
 const age = prompt('Inserisci la tua età');
-const distance = prompt('Inserisci KM totali itinerario');
+const distance = parseFloat ( prompt('Inserisci KM totali itinerario') );
 
 // costo
 rate = 0.21;
@@ -30,12 +30,12 @@ standardPrice = distance * rate;
 // sconto
 off20 = standardPrice - (standardPrice * 0.20);
 off40 = standardPrice - (standardPrice * 0.40);
-baby = `UNDER18`;
+young = `UNDER18`;
 senior = `OVER65`;
 
 if (age < 18){
     total = off20;
-    document.getElementById(`off`).innerHTML = baby;
+    document.getElementById(`off`).innerHTML = young;
 } else if (age >= 65){
     total = off40
     document.getElementById(`off`).innerHTML = senior;
@@ -50,6 +50,7 @@ document.getElementById(`surname`).innerHTML = surname;
 document.getElementById(`age`).innerHTML = age;
 document.getElementById(`distance`).innerHTML = distance;
 
+// button
 function refreshPage(){
     window.location.reload();
 }
